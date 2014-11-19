@@ -9,7 +9,7 @@ set +e
 #   dependencies  -- other haskell packages, from git
 #   release       -- artifact copying and usage
 # See sample implementation for each based on the included sample_* files
-
+git submodule init 
 . docker-base/base
 
 NAME=$1
