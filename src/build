@@ -17,7 +17,7 @@ DOCKER_REGISTRY=$2
 VERSION=$3
 DOCKER_OPTS="$4"
 
-if [ -z "$NAME" -z "$DOCKER_REGISTRY" -o -z "$VERSION" ]; then
+if [ -z "$DOCKER_REGISTRY" -o -z "$VERSION" ]; then
   echo "Usage: $0 NAME DOCKER_REGISTRY [VERSION] [DOCKER OPTS]"
   echo
   echo "VERSION defaults to \$GIT_COMMIT"
