@@ -10,11 +10,9 @@ set +e
 #   release       -- artifact copying and usage
 # See sample implementation for each based on the included sample_* files
 
-BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+BRANCH=jenkins
 
-echo git branch is $BRANCH
-
-git clone -b $BRANCH  https://github.com/anchor/docker-base.git 
+git clone -b $BRANCH https://github.com/anchor/docker-base.git 
 
 . docker-base/base
 
