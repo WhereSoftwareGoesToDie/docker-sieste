@@ -1,3 +1,0 @@
-[submodule "docker-base"]
-	path = docker-base
-	url = http://github.com/anchor/docker-base
