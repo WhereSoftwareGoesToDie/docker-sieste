@@ -17,6 +17,8 @@ cabal update
 
 cd /src
 
+
+echo "Get marquise, chevalier_common, sieste"
 get marquise
 get chevalier-common
 get sieste
