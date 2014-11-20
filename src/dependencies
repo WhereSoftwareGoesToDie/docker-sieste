@@ -2,15 +2,15 @@
 set -x
 set -e
 
-export HOME=/src
+
+echo "dependencies - exporting, installing, cabal, etc"
 
 # Git-based cabal source files
 # Helper function: get github/anchor/<source>
 
 export HOME=/src
-
-exec > /src/dependencies.log
-exec 2>&1
+#exec > /src/dependencies.log
+#exec 2>&1
 
 export PATH=/src/.cabal/bin:$PATH
 cabal update
@@ -18,7 +18,6 @@ cabal update
 cd /src
 
 
-echo "Get marquise, chevalier_common, sieste"
 get marquise
 get chevalier-common
 get sieste
@@ -27,7 +26,6 @@ cd /
 
 find /src
 
-cabal install scotty
 
 cabal install -j \
 	/src/marquise \
