@@ -12,6 +12,8 @@ set +e
 
 BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
+echo git branch is $BRANCH
+
 git clone -b $BRANCH  https://github.com/anchor/docker-base.git 
 
 . docker-base/base
