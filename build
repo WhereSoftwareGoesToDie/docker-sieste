@@ -10,7 +10,7 @@ set +e
 #   release       -- artifact copying and usage
 # See sample implementation for each based on the included sample_* files
 
-BRANCH=jenkins
+BRANCH=jenkins-clean
 
 git clone -b $BRANCH https://github.com/anchor/docker-base.git 
 
