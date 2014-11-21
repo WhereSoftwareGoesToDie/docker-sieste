@@ -16,12 +16,12 @@ git clone -b $BRANCH https://github.com/anchor/docker-base.git
 
 . docker-base/base
 
-build_init # TEST the sharing of environment variables
+build_init $@ # TEST the sharing of environment variables
 
-echo Name = $NAME
-echo Options = $DOCKER_OPTS
-echo Docker Registry = $DOCKER_REGISTRY
-echo Version = $VERSION
+echo childName = $NAME
+echo childOptions = $DOCKER_OPTS
+echo childDocker Registry = $DOCKER_REGISTRY
+echo childVersion = $VERSION
 
 
 initialize
