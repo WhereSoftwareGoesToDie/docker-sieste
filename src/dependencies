@@ -19,7 +19,9 @@ cabal update
 
 cd /src
 
-get () {  git clone https://github.com/anchor/$1.git  } 
+get () {  
+	git clone https://github.com/anchor/$1.git  
+} 
 
 get marquise
 get chevalier-common
@@ -28,7 +30,6 @@ get sieste
 cd /
 
 find /src
-
 
 cabal install -j \
 	/src/marquise \
