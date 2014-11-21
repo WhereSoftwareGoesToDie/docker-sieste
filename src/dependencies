@@ -24,6 +24,7 @@ get () {
 } 
 
 get marquise
+get vaultaire-common
 get chevalier-common
 get sieste
 
@@ -32,6 +33,7 @@ cd /
 find /src
 
 cabal install -j \
+	/src/vaultaire-common \
 	/src/marquise \
 	/src/chevalier-common \
 	/src/sieste 
