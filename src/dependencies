@@ -1,23 +1,23 @@
 #!/bin/sh
 set -x
 set -e
-
-export HOME=/src
+pwd
 
 # Git-based cabal source files
-# Helper function: get github/anchor/<source>
 
 export HOME=/src
-
-exec > /src/dependencies.log
-exec 2>&1
-
 export PATH=/src/.cabal/bin:$PATH
+
 cabal update
 
 cd /src
 
+get () {  
+	git clone https://github.com/anchor/$1.git  
+} 
+
 get marquise
+get vaultaire-common
 get chevalier-common
 get sieste
 
@@ -25,9 +25,8 @@ cd /
 
 find /src
 
-cabal install scotty
-
 cabal install -j \
+	/src/vaultaire-common \
 	/src/marquise \
 	/src/chevalier-common \
 	/src/sieste 
