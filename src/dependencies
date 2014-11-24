@@ -3,18 +3,11 @@ set -x
 set -e
 pwd
 
-#. ../docker-base/base
-
-echo "dependencies - exporting, installing, cabal, etc"
-
 # Git-based cabal source files
-# Helper function: get github/anchor/<source>
 
 export HOME=/src
-#exec > /src/dependencies.log
-#exec 2>&1
-
 export PATH=/src/.cabal/bin:$PATH
+
 cabal update
 
 cd /src
