@@ -3,14 +3,14 @@
 set +x
 set +e
 
-git clone https://github.com/anchor/docker-base.git 
+git clone https://github.com/anchor/docker-build.git
 
-. docker-base/base
+. docker-build/base
 
-build_init "$@" 
+build_init "$@"
 
 initialize
 baseline
-dependencies
+objects
 release
 publish
