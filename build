@@ -3,7 +3,7 @@
 set +x
 set +e
 
-git clone -b git_branch https://github.com/anchor/docker-build.git
+git clone https://github.com/anchor/docker-build.git
 
 . docker-build/base
 

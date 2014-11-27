@@ -33,4 +33,4 @@ cabal install -j \
 	/src/vaultaire-common \
 	/src/marquise \
 	/src/chevalier-common \
-	/src/sieste 
+	/src/sieste
