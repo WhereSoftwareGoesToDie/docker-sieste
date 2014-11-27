@@ -12,14 +12,18 @@ cabal update
 
 cd /src
 
-get () {  
-	git clone https://github.com/anchor/$1.git  
-} 
+get () {
+	get_branch=$2
+	if [ -z $get_branch ]; then
+		get_branch="master"
+	fi
+	git clone -b $get_branch https://github.com/anchor/$1.git
+}
 
 get marquise
 get vaultaire-common
 get chevalier-common
-get sieste
+get sieste $GIT_BRANCH
 
 cd /
 
